@@ -14,8 +14,6 @@ if (localStorage.getItem('feedback-form-state')) {
 }
 
 function inputData(e) {
-    e.preventDefault();
-
     const {
         elements: { email, message }
     } = feedbackForm;
