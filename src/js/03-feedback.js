@@ -2,7 +2,7 @@ import throttle from "lodash.throttle";
 
 const feedbackForm = document.querySelector('.feedback-form');
 
-feedbackForm.addEventListener('input', throttle((inputData), 500));
+feedbackForm.addEventListener('input', throttle(inputData, 500));
 feedbackForm.addEventListener('submit', inputSubmit);
 
 
