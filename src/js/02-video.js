@@ -5,6 +5,8 @@ import throttle from "lodash.throttle";
 const iframe = document.querySelector('iframe');
 const iframePlayer = new Vimeo.Player(iframe);
 
+let playerCurrenTime = 0;
+
 const onPlay = function (data) {
     localStorage.setItem('videoplayer-current-time', data.seconds)
     // console.log(onPlay)
@@ -13,7 +15,7 @@ const onPlay = function (data) {
 iframePlayer.on('timeupdate', throttle(onPlay, 1000));
 
 
-const playerCurrenTime = localStorage.getItem('videoplayer-current-time');
+playerCurrenTime = localStorage.getItem('videoplayer-current-time');
 
 
 
